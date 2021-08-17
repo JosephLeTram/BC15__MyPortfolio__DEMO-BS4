@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Hind", sans-serif;
+  font-size: 14px;
+}
+
+/* Header CSS */
+#header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.navbar-brand-name {
+  color: white;
+  font-size: 4rem;
+}
+.fa-dice-d20 {
+  color: #35a22c;
+}
+.nav-item {
+  margin: 0 16px;
+}
+header .navbar-nav .nav-item.active .nav-link {
+  color: #35a22c;
+}
+.navbar-dark .navbar-nav .nav-item .nav-link {
+  color: white;
+  font-size: 1.4rem;
+}
+header .navbar-nav .nav-item::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #35a22c;
+  transition: all 0.5s;
+}
+
+header .navbar-nav .nav-item.active::after {
+  width: 100%;
+}
+
+header .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+header .navbar-nav .nav-item:hover .nav-link {
+  color: #35a22c;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-brand-name {
+    font-size: 1.5rem;
+  }
+  .fa-dice-d20 {
+    font-size: 2rem;
+  }
+}
+
+/* End Header CSS */
+
+/* Carousel CSS */
+#carousel .carousel-item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+#carousel .carousel-item:nth-child(1) {
+  background-image: url(../images/finland.jpg);
+}
+#carousel .carousel-item:nth-child(2) {
+  background-image: url(../images/mountains.jpg);
+}
+#carousel .carousel-item:nth-child(3) {
+  background-image: url(../images/mountains-1.jpg);
+}
+#carousel .carousel__thumb {
+  width: 150px;
+  border-radius: 50%;
+  backdrop-filter: blur(5px);
+  padding: 10px;
+  margin: auto;
+}
+#carousel .carousel__thumb img {
+  width: 100%;
+  border-radius: 50%;
+  border: 7px solid rgba(255, 255, 255, 0.25);
+}
+#carousel .carousel__content h1 {
+  font-size: 4rem;
+}
+#carousel .carousel__content p {
+  font-size: 2rem;
+}
+#carousel .carousel__content {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* #carousel .carousel-indicators{
+  bottom:10%;
+
+} */
+#carousel .carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 3px;
+}
+#carousel .carousel-indicators li.active {
+  background-color: green;
+}
+
+/* End Carousel CSS */
+
+/* Welcome Section CSS */
+#welcome {
+  position: relative;
+}
+#welcome .overlay {
+  background-image: url(./../images/memphis_2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+.progress {
+  height: 0.3rem;
+}
+.aos-animate .progress-bar {
+  background: linear-gradient(to right, #33a336, #11a7c0);
+  animation-name: progress;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+@keyframes progress {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* End welcome section css */
+
+/* Feautures section CSS */
+#feature {
+  background-image: url(./../images/3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+  padding: 8rem 0;
+  color: white;
+  position: relative;
+  margin-top: 5rem;
+}
+#feature .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* .feature__heading {
+  z-index: 100;
+} */
+
+/* End features section CSS */
+
+/* Project */
+
+/* End project */
